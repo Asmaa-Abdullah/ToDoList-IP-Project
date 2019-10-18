@@ -5,7 +5,8 @@ public class Menu {
     public Scanner input = new Scanner(System.in);
     public int selection = 0;
     ToDoList toDoList = new ToDoList();
-    //TaskItem taskItem = new TaskItem();
+    ToDoFileManager toDoFileManager = new ToDoFileManager();
+    String fileName = "ToDoFileManager/ToDoFileManager.txt";
 
     public void mainMenu() throws ParseException {
 
@@ -13,7 +14,7 @@ public class Menu {
         System.out.println("\n**       Welcome to the ToDo List Application       **\n");
         System.out.println("*********************************************************");
 
-
+        toDoList.setTaskItemList(toDoFileManager.ReadFromFile(fileName));
 
         printMenu();
     }

@@ -24,6 +24,29 @@ public class ToDoFileManager {
             System.out.printf("ERROR: %s\n ", ex);
         } return result;
     }
+    /* To read an object from a file */
+    public List<TaskItem> ReadFromFile(String fileName) {
+        List<TaskItem> loadList = new ArrayList<>();
+        try {
+            FileInputStream fileIn = new FileInputStream(fileName);
+            ObjectInputStream objectIn = new ObjectInputStream(fileIn);
+            while (fileIn.available() > 0){         // check if the file stream is at the end
+                TaskItem obj = (TaskItem) objectIn.readObject();        // read from the object stream, which wraps the file stream
+                //System.out.println(obj.toString());
+                loadList.add(obj);
+            }
+
+            //System.out.println("File has been read successfully");
+            fileIn.close();
+            objectIn.close();
+            return loadList;
+
+        } catch (Exception ex) {
+            //ex.printStackTrace();
+            System.out.printf("ERROR: %s\n ", ex);
+            return loadList;
+        }
+    }
 }
 
 

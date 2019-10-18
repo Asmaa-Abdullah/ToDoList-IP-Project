@@ -13,6 +13,7 @@ public class ToDoList
 
     public ToDoList()
     {
+        new ToDoFileManager();
 
     }
 
@@ -25,13 +26,12 @@ public class ToDoList
     }
 
 
-
     /* Show all projects */
     public void showAll() {
         for (int i =0; i < taskItemList.size(); i++) {
             System.out.println(i + " " + taskItemList.get(i));
         }
-
+        //countDoneUndoneTask();
     }
 
     /* Show all projects sorted by Date */
