@@ -2,7 +2,7 @@
 import java.io.Serializable;
 import java.time.LocalDate;
 
-public class TaskItem implements Comparable {
+public class TaskItem implements Comparable, Serializable {
 
     private String projectName;
     private String taskName;

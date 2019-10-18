@@ -25,13 +25,26 @@ public class ToDoList
         this.taskItemList = list;
     }
 
+    /* Count done and undone task */
+    public void countDoneUndoneTask(){
+        int doneCount = 0;
+        int undoneCount =0;
+        for (TaskItem taskItem : taskItemList) {
+            if (taskItem.getTaskStatus().equals("done")) {
+                doneCount++;
+            }else undoneCount++;
+        }
+        System.out.println("\n-------------------------------------------------------------------------");
+        System.out.println("\n      Count of done task is : " +doneCount + "        Count of undone task is : " +undoneCount);
+        System.out.println("\n-------------------------------------------------------------------------");
+    }
 
     /* Show all projects */
     public void showAll() {
         for (int i =0; i < taskItemList.size(); i++) {
             System.out.println(i + " " + taskItemList.get(i));
         }
-        //countDoneUndoneTask();
+        countDoneUndoneTask();
     }
 
     /* Show all projects sorted by Date */
@@ -177,5 +190,4 @@ public class ToDoList
         }
     }
 }
-
 
