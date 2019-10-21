@@ -24,6 +24,7 @@ public class ToDoFileManager {
             System.out.printf("ERROR: %s\n ", ex);
         } return result;
     }
+
     /* To read an object from a file */
     public List<TaskItem> ReadFromFile(String fileName) {
         List<TaskItem> loadList = new ArrayList<>();
@@ -42,7 +43,6 @@ public class ToDoFileManager {
             return loadList;
 
         } catch (Exception ex) {
-            //ex.printStackTrace();
             System.out.printf("ERROR: %s\n ", ex);
             return loadList;
         }
