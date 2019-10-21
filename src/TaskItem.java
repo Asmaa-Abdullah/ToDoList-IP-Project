@@ -19,7 +19,7 @@ public class TaskItem implements Comparable, Serializable {
         this.taskName = taskName;
         this.taskDescription = taskDescription;
         this.taskDate = taskDate;
-        this.taskStatus = taskStatus;
+        this.taskStatus = taskStatusString;
     }
 
     public String getProjectName() {
@@ -60,6 +60,11 @@ public class TaskItem implements Comparable, Serializable {
 
     public void setTaskDescription(String taskDescription) {
         this.taskDescription = taskDescription;
+    }
+
+
+    public boolean equals(TaskItem t) {
+        return t.projectName.equals(projectName) && t.taskName.equals(taskName) && t.taskDate.equals(taskDate) && t.taskStatus.equals(taskStatus) && t.taskDescription.equals(taskDescription);
     }
 
     @Override
