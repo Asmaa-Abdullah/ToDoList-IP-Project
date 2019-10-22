@@ -28,7 +28,7 @@ public class ToDoList
     /* Count done and undone task */
     public void countDoneUndoneTask(){
         int doneCount = 0;
-        int undoneCount =0;
+        int undoneCount = 0;
         for (TaskItem taskItem : taskItemList) {
             if (taskItem.getTaskStatus().equals("done")) {
                 doneCount++;
