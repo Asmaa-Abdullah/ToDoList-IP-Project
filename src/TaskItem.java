@@ -66,7 +66,6 @@ public class TaskItem implements Comparable, Serializable {
         return t.projectName.equals(projectName) && t.taskName.equals(taskName) && t.taskDate.equals(taskDate) && t.taskStatus.equals(taskStatus) && t.taskDescription.equals(taskDescription);
     }
 
-
     @Override
     public String toString() {
         return "   "+projectName + "     " + taskName + "     " + taskDate + "     " + taskStatus + "     "+  taskDescription  ;
