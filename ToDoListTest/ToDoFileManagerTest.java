@@ -1,7 +1,4 @@
 import org.junit.jupiter.api.Test;
-
-//import java.io.File;
-//import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -25,7 +22,6 @@ public class ToDoFileManagerTest {
     public void writeToFileTest() {
 
         taskItemList.add(taskItem1);     // Write testItem1 to file
-
         boolean testResult = ToDoFileManager.writeToFile(fileName, taskItemList);       // writeToFile method is static
         assertTrue(testResult);         // Assert that the write was a success
 
@@ -35,7 +31,7 @@ public class ToDoFileManagerTest {
     public void readFromFileTest() {
         List<TaskItem> testResult = toDoFileManager.ReadFromFile(fileName);
         System.out.println(testResult);
-        assert(testResult.get(0).equals(taskItem1) );
+        assertTrue(testResult.get(0).equals(taskItem1) );
 
     }
 }
