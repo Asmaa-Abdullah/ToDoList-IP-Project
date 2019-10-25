@@ -4,6 +4,13 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * A class which tested all setter and getter methods in TaskItem class.
+ *
+ * @author  Asmaa Abdullah
+ *
+ */
+
 public class TaskItemTest {
 
     ToDoList toDoList = new ToDoList();

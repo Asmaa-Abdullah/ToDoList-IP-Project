@@ -4,6 +4,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * A class which tested write to file and read from file methods in ToDoFileManager class.
+ *
+ * @author  Asmaa Abdullah
+ *
+ */
+
 public class ToDoFileManagerTest {
 
     ToDoList toDoList = new ToDoList();

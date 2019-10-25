@@ -1,5 +1,11 @@
 import java.text.ParseException;
 import java.util.Scanner;
+/**
+ * A menu which the user can choose for adding, deleting, editing, display a task.
+ *
+ * @author  Asmaa Abdullah
+ * @since   2019-09-31
+ */
 
 public class Menu {
     public Scanner input = new Scanner(System.in);
@@ -40,6 +46,7 @@ public class Menu {
                     break;
                 case 4:
                     toDoFileManager. writeToFile(fileName, toDoList.getList());
+                    System.out.println("\n        **** All tasks saved successfully **** ");
                     System.out.println("\n ********  Thanks for using the application!  ******** ");
                     System.exit(0);
                     break;
@@ -53,8 +60,8 @@ public class Menu {
     public void showTaskList() throws ParseException {
         do {
             System.out.println("\n1 - All Task ");           // everything
-            System.out.println("2 - Sort by date ");        // everything but sorted ascending by date
-            System.out.println("3 - Sort by project");      // everything but sorted ascending by project name
+            System.out.println("2 - Sort by date ");         // everything but sorted ascending by date
+            System.out.println("3 - Sort by project");       // everything but sorted ascending by project name
             System.out.println("4 - Back to main menu ");
             System.out.print("\nSelect from the menu:  ");
 
@@ -70,6 +77,7 @@ public class Menu {
                     toDoList.showByProject();
                     break;
                 case 4:
+                    //return;
                     printMenu();
                     break;
                 default:

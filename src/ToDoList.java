@@ -5,9 +5,17 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * A class which implemented Add new task, Delete a specific task, Edit a specific task method.
+ * As well as Show all projects and counted done & undone tasks, Show all projects sorted by Date, Show all projects sorted by project method:
+ *
+ * @author  Asmaa Abdullah
+ *
+ */
+
 public class ToDoList
 {
-    List<TaskItem> taskItemList = new ArrayList<TaskItem>();        // create an arraylist to store the object of type TaskItem
+    List<TaskItem> taskItemList = new ArrayList<TaskItem>();        // create an Arraylist to store the object of type TaskItem
     TaskItem taskItem = new TaskItem();
     Scanner input = new Scanner(System.in);
 

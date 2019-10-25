@@ -3,6 +3,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.time.LocalDate;
 import java.time.Month;
 
+/**
+ * A class which tested convert date from String to LocalDate in ToDoList class.
+ *
+ * @author  Asmaa Abdullah
+ *
+ */
+
 public class ToDoListTest {
 
     @Test

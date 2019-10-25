@@ -2,6 +2,14 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A class which implemented two methods:
+ * Write to a file & Read from file
+ *
+ * @author  Asmaa Abdullah
+ *
+ */
+
 public class ToDoFileManager {
 
     TaskItem taskItem = new TaskItem();
