@@ -1,3 +1,6 @@
+import Data.TaskItem;
+import Data.ToDoFileManager;
+import Data.ToDoList;
 import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.util.List;
@@ -5,7 +8,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * A class which tested write to file and read from file methods in ToDoFileManager class.
+ * A class which tested write to file and read from file methods in Data.ToDoFileManager class.
  *
  * @author  Asmaa Abdullah
  *

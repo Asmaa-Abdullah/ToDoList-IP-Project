@@ -1,3 +1,7 @@
+package Data;
+
+import Data.TaskItem;
+import Data.ToDoFileManager;
 
 import java.text.ParseException;
 import java.time.LocalDate;
@@ -15,7 +19,7 @@ import java.util.stream.Collectors;
 
 public class ToDoList
 {
-    List<TaskItem> taskItemList = new ArrayList<TaskItem>();        // create an Arraylist to store the object of type TaskItem
+    List<TaskItem> taskItemList = new ArrayList<TaskItem>();        // create an Arraylist to store the object of type Data.TaskItem
     TaskItem taskItem = new TaskItem();
     Scanner input = new Scanner(System.in);
 
@@ -33,7 +37,9 @@ public class ToDoList
         this.taskItemList = list;
     }
 
-    /* Count done and undone task */
+    /**
+     * Count number of done and undone tasks
+     */
     public void countDoneUndoneTask(){
         int doneCount = 0;
         int undoneCount = 0;

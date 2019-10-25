@@ -1,3 +1,5 @@
+import Data.TaskItem;
+import Data.ToDoList;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -5,7 +7,7 @@ import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * A class which tested all setter and getter methods in TaskItem class.
+ * A class which tested all setter and getter methods in Data.TaskItem class.
  *
  * @author  Asmaa Abdullah
  *

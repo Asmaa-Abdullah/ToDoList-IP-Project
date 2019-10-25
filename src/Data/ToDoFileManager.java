@@ -1,3 +1,7 @@
+package Data;
+
+import Data.TaskItem;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +19,13 @@ public class ToDoFileManager {
     TaskItem taskItem = new TaskItem();
     List<TaskItem> taskItemList = new ArrayList<TaskItem>();
 
-    /* To write an object to a file */
+
+    /**
+     * Save a list to a file.
+     * @param fileName
+     * @param taskItemList
+     * @return true if object saved otherwise return false.
+     */
     public static boolean writeToFile (String fileName, List<TaskItem> taskItemList) {
         boolean result = false;
         try {
@@ -27,13 +37,18 @@ public class ToDoFileManager {
             fileOut.close();
             objectOut.close();
             result = true;
-        } catch (Exception ex) {
-            //ex.printStackTrace();
+        }
+        catch (Exception ex) {
             System.out.printf("ERROR: %s\n ", ex);
         } return result;
     }
 
-    /* To read an object from a file */
+
+    /**
+     * Read an object from a file
+     * @param fileName
+     * @return The list of object which saved in file.
+     */
     public List<TaskItem> ReadFromFile(String fileName) {
         List<TaskItem> loadList = new ArrayList<>();
         try {
@@ -45,15 +60,17 @@ public class ToDoFileManager {
                 loadList.add(obj);
             }
 
-            //System.out.println("File has been read successfully");
             fileIn.close();
             objectIn.close();
-            return loadList;
 
-        } catch (Exception ex) {
-            System.out.printf("ERROR: %s\n ", ex);
-            return loadList;
         }
+        catch (EOFException ex) {
+            System.out.printf("The list is empty now \n");
+        }
+        catch (Exception ex) {
+            System.out.printf("ERROR: %s\n ", ex);
+        }
+        return loadList;
     }
 }
 
